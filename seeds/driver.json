@@ -1,0 +1,34 @@
+[
+     {
+     "name": "Buster Baxter",
+     "pickup_location": "West Seattle High School",
+     "dropoff_location": "South Seattle High School",
+     "availability": "Afternoon"
+    },
+    {
+      "name": "Arthur Reed",
+      "pickup_location": "Bellevue Drive Park & Drive",
+      "dropoff_location": "Bellevue Elementry",
+      "availability": "Morning"
+     },
+     {
+      "name": "Binky Barnes",
+      "pickup_location": "West Seattle High School",
+      "dropoff_location": "South Seattle High School",
+      "availability": "Afternoon"
+     },
+     {
+    
+      "name": "Francine Frensky",
+      "pickup_location": "Tacoma High School",
+      "dropoff_location": "Gig Harbor Middle School",
+      "availability": "Afternoon"
+     },
+     {
+      "name": "Sue Ellen",
+      "dropoff_location": "Gig Harbor Middle School",
+      "availability": "Morning"
+      }
+
+]
+
