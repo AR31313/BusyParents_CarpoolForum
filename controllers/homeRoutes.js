@@ -32,20 +32,20 @@ router.get('/signup', (req, res) => {
 
 router.get('/', async (req, res) => {
   // If the user already has an account send them to the members page
-  // if (req.user) {
-  try {
-    const dbDriverData = await Driver.findAll({});
-    console.log(dbDriverData);
-    // Serialize user data so templates can read it
-    const posts = dbDriverData.map((driverpost) =>
-      driverpost.get({ plain: true })
-    );
+  if (req.session.user_id) {
+    try {
+      const dbDriverData = await Driver.findAll({});
+      console.log(dbDriverData);
+      // Serialize user data so templates can read it
+      const posts = dbDriverData.map((driverpost) =>
+        driverpost.get({ plain: true })
+      );
 
-    // Pass serialized data into Handlebars.js template
-    res.render('members', { posts });
-  } catch (err) {
-    //   res.status(500).json(err);
-    // }
+      // Pass serialized data into Handlebars.js template
+      res.render('members', { posts });
+    } catch (err) {
+      res.status(500).json(err);
+    }
   }
   res.render('login');
 });
@@ -60,10 +60,6 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-//route doesnt work
-router.get("/logout", (req, res) => {
-  req.logout();
-  res.redirect("/");
-});
+
 
 module.exports = router;
