@@ -13,7 +13,7 @@ const newComment = async (event) => {
 
     if (response.ok) {
       //reload the page on success - to see the comment post
-      document.location.replace(`/singlepost/${driver_id}`);
+      document.location.replace(`/dashboard/${driver_id}`);
     } else {
       alert(response.statusText);
     }

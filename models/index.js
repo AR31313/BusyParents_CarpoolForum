@@ -41,4 +41,4 @@ Driver.hasMany(Comment, {
   foreignKey: 'user_id'
 });
 
-module.exports = { User, Driver, Rider };
+module.exports = { User, Driver, Rider, Comment };
