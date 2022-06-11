@@ -49,6 +49,8 @@ router.get('/my-account', async (req, res) => {
   if (req.session.user_id) {
     try {
       const commentData = await Comment.findAll({});
+      //Issue
+      console.log(commentData);
       const comments = commentData.map((comments) =>
         comments.get({ plain: true })
       );

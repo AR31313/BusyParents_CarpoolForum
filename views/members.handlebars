@@ -34,13 +34,14 @@
         <span>Pick Up Location: {{this.pickup_location}}</span></br>
         <span>Drop Off Location: {{this.dropoff_location}}</span></br>
         <span class="w3-opacity">Post made on: {{this.date_created}}</span></br>
-        <button type="button" id="addDriver" data-post-id={{this.id}}>+ Add Driver</button></br>
+        <button type="button" id="addDriver" data-post-id={{this.id}}>+ Add Driver</button>
 
+        </br>
         <form class="commentForm">
-          <textarea type="text" id="comment" data-id="{{post.id}}"
+          <textarea type="text" rows="4" cols="50" id="comment" data-id="{{post.id}}"
             placeholder="Write a comment to check availability."></textarea>
-          <button id="confirmComment" type="submit">Confirm comment</button>
-          <button id="cancelComment" type="reset">Cancel comment</button>
+          </br><button id="confirmComment" type="submit">Post comment</button>
+          </br><button id="cancelComment" type="reset">Cancel</button>
         </form>
         <!-- Comment Card -->
         {{!-- {{>post-comments item}} --}}
