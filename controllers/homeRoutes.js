@@ -24,9 +24,10 @@ router.get('/', async (req, res) => {
       );
 
       // Pass serialized data into Handlebars.js template
-
+      console.log('test');
       res.render('members', { posts });
       return;
+      console.log('test');
     } catch (err) {
       res.status(500).json(err);
     }
@@ -38,13 +39,22 @@ router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   console.log('test1');
   if (req.session.logged_in) {
-    res.redirect('/');
+    res.redirect('/dashboard');
     return;
   }
   console.log('test');
   res.render('members');
 });
 
-
+// route doesnt work
+// router.post('/logout', (req, res) => {
+//   if (req.session.logged_in) {
+//     req.session.destroy(() => {
+//       res.status(204).end();
+//     });
+//   } else {
+//     res.status(404).end();
+//   }
+// });
 
 module.exports = router;
